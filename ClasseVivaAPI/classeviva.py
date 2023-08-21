@@ -1,10 +1,9 @@
 import requests
-import debug.ColoredPrinting as CP
 import json
 import re
 
-# ==== Classe Principale (Utente) ===== #
 
+# ==== Classe Principale (Utente) ===== #
 class Utente:
     # === Inizializza Utente === #
     def __init__(self, uid: str, pwd: str):
@@ -26,9 +25,9 @@ class Utente:
             self.token = data['token']
             self.is_logged_in = True
 
-            print(f'{CP.GREEN}Login effettuato con successo.')
+            print('Login effettuato con successo.')
         else:
-            print(f'{CP.RED}Errore durante il Login.')
+            print('Errore durante il Login.')
 
         return response
 
@@ -45,14 +44,14 @@ class Utente:
                 response = requests.post(reqeust_url[0].format(*args), headers=headers)
 
             if response.status_code == 200:
-                print(f'{CP.GREEN}Richiesta avvenuta con successo:')
-                print(f'{CP.DEFAULT}{response.text}')
+                print(f'Richiesta avvenuta con successo:')
+                print(f'{response.text}')
                 return response
             else:
-                print(f'{CP.RED}Errore durante la richiesta: {response.text}')
+                print(f'Errore durante la richiesta: {response.text}')
                 return None
         else:
-            print(f"{CP.RED}Errore durante la richiesta: L'utente non ha effetuato il login.")
+            print(f"Errore durante la richiesta: L'utente non ha effetuato il login.")
             return None
 
     def get_headers(self):
@@ -62,33 +61,32 @@ class Utente:
         return headers
 
 
-# ===== Default Header ===== #
-
-header: dict[str, str] = {
-    "User-Agent": "CVVS/std/4.1.7 Android/10",
-    "Content-Type": "application/json",
-    "Z-Dev-ApiKey": "Tg1NWEwNGIgIC0K"
-}
-
 # ===== Reqeust URLs ===== #
 class RequestURLs:
     base_url: str = 'https://web.spaggiari.eu/rest/v1'
     students_url: str = f'{base_url}/students/{{}}'  # Student Ident
 
-    absences: tuple = (f'{students_url}/absences/details', 'get')
-    agenda: tuple = (f'{students_url}/agenda/all/{{}}/{{}}', 'get')  # Begin Data (YYYYMMDD) / End Date (YYYYMMDD)
-    didactics: tuple = (f'{students_url}/didactics', 'get')
-    schoolbooks: tuple = (f'{students_url}/schoolbooks', 'get')
-    calendar: tuple = (f'{students_url}/calendar/all', 'get')
+    assenze: tuple = (f'{students_url}/absences/details', 'get')
+    agenda: tuple = (f'{students_url}/agenda/all/{{}}/{{}}', 'get')  # Data Inizio (YYYYMMDD) / Data Fine (YYYYMMDD)
+    didattica: tuple = (f'{students_url}/didactics', 'get')
+    libri: tuple = (f'{students_url}/schoolbooks', 'get')
+    calendario: tuple = (f'{students_url}/calendar/all', 'get')
     card: tuple = (f'{students_url}/card', 'get')
-    grades: tuple = (f'{students_url}/grades', 'get')
-    lessons: tuple = (f'{students_url}/lessons/today', 'get')
-    lessons_by_day: tuple = (f'{students_url}/lessons/{{}}', 'get') # Lessons Day (YYYYMMDD)
-    notes: tuple = (f'{students_url}/notes/all', 'get')
-    perioids: tuple = (f'{students_url}/perioids', 'get')
-    subjects: tuple = (f'{students_url}/subjects', 'get')
+    voti: tuple = (f'{students_url}/grades', 'get')
+    lezioni_oggi: tuple = (f'{students_url}/lessons/today', 'get')
+    lezioni_giorno: tuple = (f'{students_url}/lessons/{{}}', 'get')  # Lezioni Giorno (YYYYMMDD)
+    note: tuple = (f'{students_url}/notes/all', 'get')
+    periods: tuple = (f'{students_url}/perioids', 'get')
+    materie: tuple = (f'{students_url}/subjects', 'get')
 
     login: tuple = (f'{base_url}/auth/login', 'post')
     noticeboard: tuple = (f'{students_url}/noticeboard', 'post')
-    documents: tuple = (f'{students_url}/documents', 'post')
-    documents_check: tuple = (f'{students_url}/documents/check/{{}}', 'post')
+    documenti: tuple = (f'{students_url}/documents', 'post')
+
+
+# ===== Default Header ===== #
+header: dict[str, str] = {
+    "User-Agent": "CVVS/std/4.1.7 Android/10",
+    "Content-Type": "application/json",
+    "Z-Dev-ApiKey": "Tg1NWEwNGIgIC0K"
+}
