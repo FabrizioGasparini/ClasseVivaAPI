@@ -4,14 +4,14 @@
 
 ## Informazioni
 
-ClasseVivaAPI è una libreria <b>[`Python`](https://www.python.org/)</b> che permette di utlizzare l'API di <b>[`Classeviva`](https://web.spaggiari.eu/)</b> - <b>[`GruppoSpaggiariParma`](https://web.spaggiari.eu/www/app/default/index.php)</b> per ottenere informazioni come <b>Voti</b>, <b>Note</b> e <b>Documenti</b>, relative ad un account ClasseViva.
+[`ClasseVivaAPI`]() è una libreria <b>[`Python`](https://www.python.org/)</b> che permette di utlizzare l'API di <b>[`Classeviva`](https://web.spaggiari.eu/)</b> - <b>[`GruppoSpaggiariParma`](https://web.spaggiari.eu/www/app/default/index.php)</b> per ottenere informazioni come <b>Voti</b>, <b>Note</b> e <b>Documenti</b>, relative ad un account ClasseViva.
 
 <br></br>
 
-## Installa ClasseVivaAPI da PyPI
+## Installa ClasseVivaAPI da [`PyPI`]()
 
 ```bash
-pip install ClasseVivaAPI
+pip install CVV-API
 ```
 <br></br>
 
