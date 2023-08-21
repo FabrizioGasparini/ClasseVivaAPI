@@ -1,14 +1,14 @@
-<h1 align='center'>=======  ClasseViva-API - Python  =======</h1>
+<h1 align='center'>ClasseVivaAPI - Python</h1>
 
 <br></br>
 
 ## Informazioni
 
-[`ClasseViva-API`]() è una libreria <b>[`Python`](https://www.python.org/)</b> che permette di utlizzare l'API di <b>[`Classeviva`](https://web.spaggiari.eu/)</b> - <b>[`GruppoSpaggiariParma`](https://web.spaggiari.eu/www/app/default/index.php)</b> per ottenere informazioni come <b>Voti</b>, <b>Note</b> e <b>Documenti</b>, relative ad un account ClasseViva.
+[`ClasseVivaAPI`]() è una libreria <b>[`Python`](https://www.python.org/)</b> che permette di utlizzare l'API di <b>[`Classeviva`](https://web.spaggiari.eu/)</b> - <b>[`GruppoSpaggiariParma`](https://web.spaggiari.eu/www/app/default/index.php)</b> per ottenere informazioni come <b>Voti</b>, <b>Note</b> e <b>Documenti</b>, relative ad un account ClasseViva.
 
 <br></br>
 
-## Installa ClasseViva-API da [`PyPI`]()
+## Installa ClasseVivaAPI da [`PyPI`]()
 
 ```bash
 pip install CVV-API
@@ -19,7 +19,7 @@ pip install CVV-API
 
 <b>Richiedi i VOTI di un utente (richiesta senza parametri):</b>
 ```py
-from ClasseViva-API import Utente, RequestURLs
+from ClasseVivaAPI import Utente, RequestURLs
 
 utente = Utente(uid="USERNAME", pwd="PASSWORD")  # Crea un Utente utilizzando USERNAME e PASSWORD del tuo account ClasseViva
 utente.login()  # Effetua l'accesso all'account, verificando che i dati inseriti siano corretti
@@ -31,7 +31,7 @@ print(voti.json())  # Stampa il risultato della richiesto nella console, in form
 
 <b>Richiedi l'AGENDA di un utente (richiesta con parametri):</b>
 ```py
-from ClasseViva-API import Utente, RequestURLs
+from ClasseVivaAPI import Utente, RequestURLs
 
 utente = Utente(uid="USERNAME", pwd="PASSWORD")  # Crea un Utente utilizzando USERNAME e PASSWORD del tuo account ClasseViva
 utente.login()  # Effetua l'accesso all'account, verificando che i dati inseriti siano corretti
@@ -135,4 +135,4 @@ Se hai idee per migliorare questa libreria o hai riscontrato problemi, puoi cont
 ## Licenza
 Questa libreria è rilasciata con la licenza [`MIT License`](https://opensource.org/license/mit/).
 
-Buon utilizzo della libreria ClasseViva-API!
+Buon utilizzo della libreria ClasseVivaAPI!
