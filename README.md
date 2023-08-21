@@ -127,10 +127,12 @@ class RequestURLs()
 <br></br>
 <br></br>
 
-##Contributi e Supporto
+## Contributi e Supporto
 Se hai idee per migliorare questa libreria o hai riscontrato problemi, puoi contribuire aprendo issue o pull request su GitHub. Sarò felice di ricevere feedback e aiutarti nelle tue implementazioni.
 
-##Licenza
+<br></br>
+
+## Licenza
 Questa libreria è rilasciata con la licenza [`MIT License`](https://opensource.org/license/mit/).
 
 Buon utilizzo della libreria ClasseVivaAPI!
