@@ -1,4 +1,4 @@
-<h1 align='center'>========= 📒 ClasseVivaAPI - Python 🐍 =========</h1>
+<h1 align='center'>======= 📒 ClasseVivaAPI - Python 🐍 =======</h1>
 
 <br></br>
 
